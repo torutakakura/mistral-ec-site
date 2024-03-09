@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
+  font-size: 1.6rem; /* 16px*/
+  line-height: 2;
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+h1 {
+  font-size: 36px; /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2.8rem + ((1vw - 0.64rem) * 2.1429)); /* 28px~36pxで可変*/
+  line-height: 1.3;
+}
+h2 {
+  font-size: 24px; /* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143)); /* 20px~28pxで可変*/
+  line-height: 1.3;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+.red::before {
+  content: "";
+  background-color: rgba(255, 0, 0, 0.2);
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+
+.white_green::before {
+  content: "";
+  background: linear-gradient(
+    to bottom right,
+    rgba(170, 255, 170, 0.5),
+    rgba(255, 255, 255, 1)
+  );
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+
+.pink::before {
+  content: "";
+  background-color: rgba(255, 192, 203, 0.3);
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+
+div.mycontainer {
+  max-width: 1200px;
+  min-width: 900px;
+  margin: 0 auto 0 auto;
+}
+
+.yellow_orange::before {
+  content: "";
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 140, 0, 0.3),
+    rgba(255, 249, 166, 0.3)
+  );
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+
+.violet_blue::before {
+  content: "";
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 255, 0.3),
+    rgba(238, 130, 238, 0.2)
+  ); /* 背景色指定 */
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+
+.mix_color::before {
+  content: "";
+  background: conic-gradient(
+    rgba(255, 94, 77, 0.3),
+    rgba(255, 153, 102, 0.3),
+    rgba(0, 255, 150, 0.3),
+    rgba(77, 196, 255, 0.3),
+    rgba(148, 77, 255, 0.3),
+    rgba(255, 94, 77, 0.3)
+  );
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+  top: 0;
+  z-index: -1;
+}
+input.form-size {
+  width: 400px;
+}
+textarea.form-size {
+  width: 400px;
+  height: 80px;
+}
+.card-shadow {
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.1);
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h3.required:after,
+label.required:after {
+  margin-left: 1em;
+  padding: 0px 6px 0px 6px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  color: white;
+  background-color: #c44;
+  content: "必須";
+}
+
+.base-stripe {
+  padding: 8px 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.w256 {
+  max-width: 256px;
+}
+
+.w144 {
+  max-width: 144px;
+}
+
+.bgGreenDark {
+  background: #386641;
+}
+
+.bgGreenNormal {
+  background: #6a994e;
+}
+
+.bgGreenLight {
+  background: #a7c957;
+}
+
+.bgBeju {
+  background: #f2e8cf;
+}
+
+.bgRed {
+  background: #bc4749;
+}
+
+.textRed {
+  color: #bc4749;
+}
+
+@media (min-width: 1200px) {
+  /* 1200px以上*/
+  h1 {
+    font-size: 3.6rem; /* 36px*/
+  }
+  h2 {
+    font-size: 2.8rem; /* 28px*/
+  }
+}
+@media screen and (max-width: 640px) {
+  /* 640px以下*/
+  body {
+    line-height: 2;
+  }
+  h1 {
+    font-size: 2.8rem; /* 28px*/
+  }
+  h2 {
+    font-size: 2rem; /* 20px*/
+  }
+  input.form-size {
+    width: 320px;
+  }
+  textarea.form-size {
+    width: 320px;
+    height: 80px;
+  }
+}
